@@ -15,7 +15,7 @@ Hacker Track - Week 3
 	   return sum; 
 	}
 	var arr = [1,2,3,4,5];
-	iterArr();
+	iterArr(arr);
 
 //b) Given an array with multiple values (e.g. [-3,3,5,7]), write a function that returns the maximum number in the array.(The best way to do this is to have the computer go through each number, one at a time, and to update the value in a variable called 'maximum' (or whatever you want to name the variable); imagine if we gave you no number and asked you what a maximum number is. What would you say? Say the first number we gave you was -3 and asked you what a maximum number is. What would you say? Say the next number we gave you was 3 and asked you again what a maximum number now is. What would you say? Have the computer imitate this behavior of updating the maximum number as you iterate through each number in the array). Again, you're not to use any of the pre-built functions.
 
@@ -42,8 +42,17 @@ Hacker Track - Week 3
 
 	function findAvg(arr) {
 	   //Place your code here 
-	   return avg; 
+	   	var avg = 0
+	  	for (i = 0; i < arr.length; i++){
+			avg = (avg + arr[i])
+		}
+		avg = avg/arr.length
+		return avg;
 	}
+
+	var arr = [1,3,5,7,9,2,4,5];
+
+	findAvg(arr);
 
 
 //Once finished, email a saved .html file with your answers to hello@digitalcrafts.com with "Hacker Week 3 - First Last Name" in the subject line.
