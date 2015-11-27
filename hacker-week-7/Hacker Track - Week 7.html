@@ -6,7 +6,17 @@ Hacker Track - Week 7
 
 
 	//Place your code here.
-
+	var sequence = function(){
+		var a = 0;
+		var b = 1;
+		var c = 1;
+		for (var i = 2; i <= 4000000; i++){
+			c = a + b;
+			a = b;
+			b = c;
+		}
+		return c;
+	}
 
 
 //Once finished, email a saved .html file with your answers to hello@digitalcrafts.com with "Hacker Week 7 - First Last Name" in the subject line.
