@@ -9,15 +9,20 @@ Hacker Track - Week 7
 	var sequence = function(){
 		var a = 0;
 		var b = 1;
-		var c = 1;
-		for (var i = 2; i <= 4000000; i++){
+		var c;
+		var sum = 0;
+		for (var i = 2; i <= 100; i++){
 			c = a + b;
 			a = b;
 			b = c;
+			if(b % 2 === 0 && b < 4000000){
+				sum = sum + b
+			}
 		}
-		return c; 
+		return sum; 
 	}
 
+sequence();
 
 //Once finished, email a saved .html file with your answers to hello@digitalcrafts.com with "Hacker Week 7 - First Last Name" in the subject line.
 
